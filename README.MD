@@ -7,12 +7,16 @@ Pending leaves (Admin's Approval need).
 In this System per day max leave amount is 10. If that amount exceed, then those leaves have to get the admin's
 permission to accept the leave.
 when staff members check their leaves history, they can see the status of their leaves.
-          1). Accept - Leave accept
-          2). Pending - Admin's approval needed
-          3). Reject - Admin Reject the leave request
+
 
 Modules - Admin , Staff Member
 
+          Status -
+              1). Accept - Leave accept
+              2). Pending - Admin's approval needed
+              3). Reject - Admin Reject the leave request
+
+              
           Admin Functions -
               1). View System Users
               2). Check User's Leaves
