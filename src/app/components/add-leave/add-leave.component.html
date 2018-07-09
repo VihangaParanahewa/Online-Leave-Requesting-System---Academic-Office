@@ -1,0 +1,29 @@
+<div class="container" align="center">
+  <h2 class="page-header">Add Leave</h2>
+  <form (submit)="onLeaveSubmit()">
+    <div class="row">
+      <div class="form-group col-lg-4">
+      </div>
+      <div class="form-group col-lg-4">
+        <div class="text-center">
+          <label>Select Date</label>
+        </div>
+        <input type="date" [(ngModel)]="leaveDate" name="leaveDate" class="form-control" id="leaveDate">
+      </div>
+      <div class="form-group col-lg-4"></div>
+    </div>
+    <div class="row">
+      <div class="form-group" align="center">
+        <br>
+        <button type="submit" class="btn btn-primary" name="submit" value="create"
+                onclick="return confirm('Are You Sure ' +
+                         'You Want To Login To Add a Leave..!');">Save</button>
+        <a href="/" class="btn btn-danger"
+           onclick="return confirm('Are You Sure ' +
+                         'You want to cancel this Process..?');">Cancel</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+

@@ -1,0 +1,56 @@
+<div class="text-center">
+  <h4>Check Leaves Availability</h4>
+</div>
+<hr>
+<form (submit)="onAvailabilitySubmit()">
+  <div class="container">
+    <div class="row">
+      <div class="form-group col-lg-4"></div>
+      <div class="form-group col-lg-4">
+        <div class="text-center">
+          <label>Select Date</label>
+        </div>
+        <input type="date" [(ngModel)]="leaveDate" name="leaveDate" class="form-control" id="leaveDate">
+      </div>
+      <div class="form-group col-lg-4">
+        <br>
+        <button type="submit" class="btn btn-warning" name="submit" value="create">Search Now &raquo;</button>
+      </div>
+    </div>
+    <hr>
+  </div>
+</form>
+<div *ngIf="max">
+<div class="container">
+  <div class="row">
+    <div class="container">
+      <div class="text-center"><h3>Report - Leaves Availability</h3></div>
+      <hr>
+      <div class="table-responsive">
+        <div class="text-center">
+          <table class="table table-user-information" align="center">
+            <thead>
+            <tr>
+              <th><div class="text-center">Leave Date</div></th>
+              <th><div class="text-center">Accepted Leaves</div></th>
+              <th><div class="text-center">Rejected Leaves</div></th>
+              <th><div class="text-center">Pending Leaves</div></th>
+              <th><div class="text-center">Max Leaves Limit(Per day)</div></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>{{leaveDate}}</td>
+              <td>{{accept}}</td>
+              <td>{{reject}}</td>
+              <td>{{pending}}</td>
+              <td>{{max}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

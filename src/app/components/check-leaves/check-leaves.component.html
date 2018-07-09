@@ -1,0 +1,63 @@
+<div class="text-center">
+  <h4>Check Leaves</h4>
+</div>
+<hr>
+<form (submit)="onCheckLeavesSubmit()">
+  <div class="container">
+    <div class="row">
+      <div class="form-group col-lg-4">
+        <div class="text-center">
+          <label>Select Date</label>
+        </div>
+        <input type="date" [(ngModel)]="leaveDate" name="leaveDate" class="form-control" id="leaveDate">
+      </div>
+      <div class="form-group col-lg-4">
+        <div class="text-center">
+          <label>Status</label>
+        </div>
+        <div class="text-center">
+          <label class="radio-inline"><input type="radio" [(ngModel)]="status" name="status" value="Pending">Pending</label>
+          <label class="radio-inline"><input type="radio" [(ngModel)]="status" name="status" value="Reject">Reject</label>
+          <label class="radio-inline"><input type="radio" [(ngModel)]="status" name="status" value="Accept">Accept</label>
+        </div>
+      </div>
+      <div class="form-group col-lg-4">
+        <br>
+        <button type="submit" class="btn btn-warning" name="submit" value="create">Search Now &raquo;</button>
+      </div>
+    </div>
+    <hr>
+  </div>
+</form>
+
+<div *ngIf="leavers">
+  <div class="container">
+    <div class="row">
+      <div class="container">
+        <div class="text-center"><h3>Report - All Leaves | {{leaveDate}} |</h3></div>
+        <hr>
+        <div class="table-responsive">
+          <div class="text-center">
+            <table class="table table-user-information" align="center">
+              <thead>
+              <tr>
+                <th><div class="text-center">Leavers</div></th>
+                <th><div class="text-center">Action</div></th>
+                <th><div class="text-center">Status</div></th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let leave of leavers">
+                <td><img src="{{leave.profileImage}}" class="rounded" alt="..." height="30px" width="30px"> {{leave.owner}}</td>
+                <td> <a (click)="adminDecision(leave.ownerId, leaveDate)"  class="btn btn-primary">Admin Decision &raquo;</a></td>
+                <td>{{leave.status}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -16,7 +16,7 @@ Modules - Admin , Staff Member
               2). Pending - Admin's approval needed
               3). Reject - Admin Reject the leave request
 
-              
+
           Admin Functions -
               1). View System Users
               2). Check User's Leaves
